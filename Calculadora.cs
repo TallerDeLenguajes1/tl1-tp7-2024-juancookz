@@ -1,5 +1,6 @@
 
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
@@ -20,44 +21,25 @@ namespace EspacioCalculadora
         {
             resultado += num;
         }
-        
+
         public void Restar(float num)
         {
             resultado -= num;
         }
-        /*
-        public void Multiplicar()
+
+        public void Multiplicar(float num)
         {
-            System.Console.WriteLine("MULTIPLICAR");
-            Console.WriteLine("Ingrese el primer número:");
-            num1 = verifNum();
-            Console.WriteLine("Ingrese el segundo número:");
-            num2 = verifNum();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("El resultado es: " + (num1 * num2));
-            Console.ResetColor();
+            resultado = resultado * num;
         }
-        public void Dividir()
+
+        public void Dividir(float num)
         {
-            System.Console.WriteLine("DIVIDIR");
-            Console.WriteLine("Ingrese el primer número:");
-            num1 = verifNum();
-            while (true)
-            {
-                Console.WriteLine("Ingrese el segundo número:");
-                num2 = verifNum();
-                if (num2 != 0)
-                {
-                    break;
-                }
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("NO SE PUEDE DIVIDIR EN 0");
-                Console.ResetColor();
-            }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("El resultado es: " + (num1 / num2));
-            Console.ResetColor();
-        }*/
+            resultado = resultado / num;
+        }
+        public void Limpiar()
+        {
+            resultado = 0;
+        }
         private float verifNum()
         {
             float num;
